@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">103302457366-393o0vhegvl7p90p0k982et8sfirnpo1.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://rent-12216.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">103302457366</string>
+    <string name="google_api_key" translatable="false">AIzaSyCwmFUN_gRNOLlHV2RA1lS3Wfu-i90ecYs</string>
+    <string name="google_app_id" translatable="false">1:103302457366:android:d14d05fe7dec090bb6ad37</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCwmFUN_gRNOLlHV2RA1lS3Wfu-i90ecYs</string>
+    <string name="google_storage_bucket" translatable="false">rent-12216.appspot.com</string>
+    <string name="project_id" translatable="false">rent-12216</string>
+</resources>

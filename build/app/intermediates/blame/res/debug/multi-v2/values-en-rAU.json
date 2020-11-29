@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Shivam Jaglan\\AndroidStudioProjects\\flutter\\trial1\\try1\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Shivam Jaglan\\.gradle\\caches\\transforms-2\\files-2.1\\5e415dcf0171c2769a7c07769f1a2292\\core-1.2.0\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "457",
+                        "endColumns": "100",
+                        "endOffsets": "553"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Shivam Jaglan\\.gradle\\caches\\transforms-2\\files-2.1\\f7584ed420feb4adf43004523a2cdbc5\\browser-1.2.0\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,153,250,359",
+                        "endColumns": "97,96,108,97",
+                        "endOffsets": "148,245,354,452"
+                    }
+                }
+            ]
+        }
+    ]
+}
