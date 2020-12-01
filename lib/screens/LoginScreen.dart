@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
   final _phoneController = TextEditingController();
+
   final _codeController = TextEditingController();
 
   Future<bool> loginUser(String phone, BuildContext context) async{
@@ -92,6 +93,7 @@ class LoginScreen extends StatelessWidget {
                   Text("Login", style: TextStyle(color: Colors.lightBlue, fontSize: 36, fontWeight: FontWeight.w500),),
 
                   SizedBox(height: 16,),
+
 
                   TextFormField(
                     decoration: InputDecoration(
