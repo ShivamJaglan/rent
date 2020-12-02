@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:try1/screens/newowner.dart';
+import 'package:try1/screens/newtenant.dart';
 
 class HomeScreen extends StatefulWidget {
 
@@ -20,12 +22,24 @@ class _HomeScreenState extends State<HomeScreen> {
       selectedIndex = index;
     });
   }
-
+  Future navigateTonewownerPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => newowner()));
+  }
+  Future navigateTonewtenantPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => newtenant()));
+  }
   Widget customRadio(String txt,int index){
     return OutlineButton(
 
+      onPressed: () { changeIndex(index);
 
-      onPressed: () => changeIndex(index),
+          if(selectedIndex==0){
+          navigateTonewownerPage(context);}
+          else{
+            navigateTonewtenantPage(context);
+          }
+      },
+      // onPressed: () => changeIndex(index),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       borderSide: BorderSide(color: selectedIndex == index ? Colors.cyan : Colors.grey),
 
@@ -46,19 +60,19 @@ class _HomeScreenState extends State<HomeScreen> {
 
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [Color(0xFF1947988), Color(0xFF191414)]),),
+                colors: [Colors.green[900], Color(0xFF191414)]),),
 
           padding: EdgeInsets.all(32),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
 
             children: <Widget>[
 
-              SizedBox(height:32),
-              Text("You are Logged in succesfully", style: TextStyle(color: Colors.lightBlue, fontSize: 20,),),
-              SizedBox(height: 16,),
-              Text("${widget.user.phoneNumber}", style: TextStyle(color: Colors.grey, ),),
+              // SizedBox(height:32),
+              // Text("You are Logged in succesfully", style: TextStyle(color: Colors.lightBlue, fontSize: 20,),),
+              // SizedBox(height: 16,),
+              // Text("${widget.user.phoneNumber}", style: TextStyle(color: Colors.grey, ),),
               SizedBox(height:16),
               Container(
 
