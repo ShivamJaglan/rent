@@ -1,4 +1,6 @@
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class newtenant extends StatelessWidget {
@@ -7,7 +9,7 @@ class newtenant extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        toolbarHeight: 70,
+        // toolbarHeight: kToolbarHeight,
         automaticallyImplyLeading: false,
       ),
       backgroundColor: Colors.grey[300],

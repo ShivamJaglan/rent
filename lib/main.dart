@@ -1,5 +1,9 @@
 import 'package:try1/screens/LoginScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:try1/screens/newlogin.dart';
+import 'package:try1/screens/ownermainscreen.dart';
+import 'package:try1/screens/homenavigator.dart';
+import 'package:try1/screens/HomeScreen2.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,7 +26,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: LoginScreen()
+        home: HomeScreen2()
     );
   }
 }

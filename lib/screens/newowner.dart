@@ -1,7 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:try1/screens/ownermainscreen.dart';
+import 'package:try1/screens/homenavigator.dart';
 
 class newowner extends StatelessWidget {
+  Future navigatetohomescreennavigator(context) async {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => homenavigator()));
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +19,7 @@ class newowner extends StatelessWidget {
         style: TextStyle(color: Colors.red[900],),),
 
         backgroundColor: Colors.white,
-        toolbarHeight: 70,
+        // toolbarHeight: 70,
         automaticallyImplyLeading: false,
       ),
       backgroundColor: Colors.grey[300],
@@ -50,7 +59,7 @@ class newowner extends StatelessWidget {
 
                     child: Text('CREATE',
                     style: TextStyle(color: Colors.white),),
-                    onPressed: () {},
+                    onPressed: () {navigatetohomescreennavigator(context);},
                     padding: EdgeInsets.all(50),
 
                     color: Colors.indigo[900],

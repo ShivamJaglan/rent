@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:try1/screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:try1/screens/HomeScreen2.dart';
 
 class LoginScreen extends StatelessWidget {
   final _phoneController = TextEditingController();
@@ -22,7 +23,7 @@ class LoginScreen extends StatelessWidget {
 
           if(user != null){
             Navigator.push(context, MaterialPageRoute(
-                builder: (context) => HomeScreen(user: user,)
+                builder: (context) => HomeScreen2(user: user,)
             ));
           }else{
             print("Error");
@@ -63,7 +64,7 @@ class LoginScreen extends StatelessWidget {
 
                         if(user != null){
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => HomeScreen(user: user,)
+                              builder: (context) => HomeScreen2(user: user,)
                           ));
                         }else{
                           print("Error");
@@ -81,57 +82,80 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
+    return Scaffold(
+        appBar: AppBar(
+          title:  Text('Kirayedar',
+            style: TextStyle(color: Colors.red[900],),),
 
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Color(1947988), Color(0xFF191414)]),),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-          body: Container(
+          backgroundColor: Colors.white,
+          // toolbarHeight: 70,
+          automaticallyImplyLeading: false,
+        ),
+        backgroundColor: Colors.grey[300],
+        body: Container(
 
-            child: SingleChildScrollView(
+          child: SingleChildScrollView(
 
-              child: Container(
-                padding: EdgeInsets.all(32),
-                child: Form(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      SizedBox(height:150),
-                      Text("Login", style: TextStyle(color: Colors.lightBlue, fontSize: 36, fontWeight: FontWeight.w500),),
+            child: Container(
+              padding: EdgeInsets.all(32),
+              child: Form(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(height:150),
+                    Text("Login", style: TextStyle(color: Colors.indigo[900], fontSize: 36, fontWeight: FontWeight.w500),),
 
-                      SizedBox(height: 16,),
+                    SizedBox(height: 16,),
 
-
-                      TextFormField(
-                        decoration: InputDecoration(
-                            enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(30)),
-                                borderSide: BorderSide(color: Colors.grey[200])
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(30)),
-                                borderSide: BorderSide(color: Colors.grey[300])
-                            ),
-                            filled: true,
-                            fillColor: Colors.grey[100],
-                            hintText: "Mobile Number"
-
+                    TextFormField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white,
+                        hintText: "Enter your phone number",
+                        errorStyle: TextStyle(
+                          color: Colors.red,
+                          wordSpacing: 5.0,
                         ),
-                        controller: _phoneController,
+                        hintStyle: TextStyle(
+                          letterSpacing: 1.3,
+                        ),
+                        contentPadding: EdgeInsets.all(15.0),
+                        // Inside box padding
+                        border: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.indigo[900]),
+
+                            gapPadding: 0.0, borderRadius: BorderRadius.circular(1.5)),
                       ),
+                      controller: _phoneController,
+                    ),
+                    // TextFormField(
+                    //   decoration: InputDecoration(
+                    //       enabledBorder: OutlineInputBorder(
+                    //           borderRadius: BorderRadius.all(Radius.circular(30)),
+                    //           borderSide: BorderSide(color: Colors.grey[200])
+                    //       ),
+                    //       focusedBorder: OutlineInputBorder(
+                    //           borderRadius: BorderRadius.all(Radius.circular(30)),
+                    //           borderSide: BorderSide(color: Colors.grey[300])
+                    //       ),
+                    //       filled: true,
+                    //       fillColor: Colors.grey[100],
+                    //       hintText: "Mobile Number"
+                    //
+                    //   ),
+                    //   controller: _phoneController,
+                    // ),
 
-                      SizedBox(height: 16,),
+                    SizedBox(height: 16,),
 
 
-                      Container(
-                        width: double.infinity,
+                    Container(
+                      width: double.infinity,
+                      child: Align(
+                        alignment: FractionalOffset.bottomCenter,
                         child: RaisedButton(
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+                          // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
                           child: Text("LOGIN"),
                           textColor: Colors.white,
                           padding: EdgeInsets.all(16),
@@ -141,16 +165,16 @@ class LoginScreen extends StatelessWidget {
                             loginUser(phone, context);
 
                           },
-                          color: Colors.blue,
+                          color: Colors.indigo[900],
                         ),
-                      )
-                    ],
-                  ),
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
-          )
-      ),
+          ),
+        )
     );
   }
 }
