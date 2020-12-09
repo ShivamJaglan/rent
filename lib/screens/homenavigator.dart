@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:try1/screens/ownermainscreen.dart';
 import 'package:try1/screens/placeholderwidget.dart';
+import 'package:try1/screens/trialownermainscreen2.dart';
 
 class homenavigator extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _homenavigatorState extends State<homenavigator> {
 
   void onTabTapped(int index) { setState(() { _currentIndex = index; }); }
   int _currentIndex = 0;
-  final List<Widget> _children = [ownermainscreen(),placeholderwidget(Colors.green),placeholderwidget(Colors.red),];
+  final List<Widget> _children = [ownermainscreen2(),placeholderwidget(Colors.green),placeholderwidget(Colors.red),];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

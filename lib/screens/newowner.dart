@@ -53,14 +53,14 @@ class newowner extends StatelessWidget {
               child: Align(
                 alignment: FractionalOffset.bottomCenter,
                 child: ButtonTheme(
-                  height: 30,
+                  height: 60,
                   minWidth: double.infinity,
                   child: RaisedButton(
 
                     child: Text('CREATE',
-                    style: TextStyle(color: Colors.white),),
+                    style: TextStyle(color: Colors.white, fontSize: 20),),
                     onPressed: () {navigatetohomescreennavigator(context);},
-                    padding: EdgeInsets.all(50),
+                    // padding: EdgeInsets.all(50),
 
                     color: Colors.indigo[900],
                   textColor: Colors.white,),

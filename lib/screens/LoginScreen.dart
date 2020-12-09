@@ -45,6 +45,7 @@ class LoginScreen extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       TextField(
+                        keyboardType: TextInputType.number,
                         controller: _codeController,
                       ),
                     ],
@@ -109,6 +110,7 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(height: 16,),
 
                     TextFormField(
+                      // keyboardType: TextInputType,
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,

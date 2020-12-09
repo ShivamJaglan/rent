@@ -3,10 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:search_widget/search_widget.dart';
 class ownermainscreen extends StatelessWidget {
 
 
-  void _settingModalBottomSheet(context){
+  void settingModalBottomSheet(context){
     showModalBottomSheet(
         context: context,
         builder: (BuildContext bc){
@@ -55,7 +56,7 @@ class ownermainscreen extends StatelessWidget {
           child: FlatButton(
 
               textColor: Colors.white,
-              onPressed: () {_settingModalBottomSheet(context);},
+              onPressed: () {settingModalBottomSheet(context);},
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text("Property name " +"\u{25BC}",

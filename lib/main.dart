@@ -4,6 +4,11 @@ import 'package:try1/screens/newlogin.dart';
 import 'package:try1/screens/ownermainscreen.dart';
 import 'package:try1/screens/homenavigator.dart';
 import 'package:try1/screens/HomeScreen2.dart';
+import 'package:try1/screens/trialownermainscreen2.dart';
+import 'package:try1/tenantadd/page2.dart';
+import 'package:try1/tenantadd/rentamount.dart';
+
+
 
 void main() => runApp(MyApp());
 
@@ -26,7 +31,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: HomeScreen2()
+        home: LoginScreen()
     );
   }
 }

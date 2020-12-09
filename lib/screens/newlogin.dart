@@ -44,7 +44,9 @@ class newlogin extends StatelessWidget {
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      TextField( decoration: InputDecoration(
+                      TextField(
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
 
@@ -117,6 +119,7 @@ class newlogin extends StatelessWidget {
         child: Column(
           children: [
             TextFormField(
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.white,
